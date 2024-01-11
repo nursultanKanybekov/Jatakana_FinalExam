@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>queue</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="queue.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.2.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+    <script type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "",
+        "logo": "images/image6.png"
+    }</script>
+    <meta name="theme-color" content="#cf233d">
+    <meta property="og:title" content="queue">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+<header class=" u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-clearfix u-header u-section-row-container"
+        id="sec-8bd7" style="background-image: none" th:insert="blocks/header :: header">
+</header>
+<section class="u-align-center u-clearfix u-section-1" id="sec-2cb0">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+            <table class="u-table-entity u-table-entity-1">
+                <colgroup>
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                </colgroup>
+                <thead class="u-black u-table-header u-table-header-1">
+                <tr style="height: 21px;">
+                    <th class="u-border-1 u-border-black u-table-cell">ФИО</th>
+                    <th class="u-border-1 u-border-black u-table-cell">Курс</th>
+                    <th class="u-border-1 u-border-black u-table-cell">Кезеги</th>
+                    <th class="u-border-1 u-border-black u-table-cell">Баллы</th>
+                </tr>
+                </thead>
+                <tbody class="u-table-body">
+                <tr style="height: 75px;" th:each="studentModel : ${studentsModels}">
+                    <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${studentModel.name}"></td>
+                    <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${studentModel.course}"></td>
+                    <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${studentModel.infoYourself}"></td>
+                    <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${studentModel.point}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80 u-footer"
+        id="sec-e9f4" th:insert="blocks/footer::footer"></footer>
+
+</body>
+</html>
